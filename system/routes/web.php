@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,7 @@ Route::get('/produk-admin', function () {
 Route::get('/jual-produk', function () {
     return view('jual-produk');
 });
-Route::get('/histori-penjualan', function () {
-    return view('histori-penjualan');
+
+Route::get('/kategori-admin', function () {
+    return view('kategori-admin');
 });
