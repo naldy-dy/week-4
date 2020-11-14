@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Dream</title>
+    <title>Lapak-Kayong | Admin</title>
     <!-- Bootstrap Styles-->
     <link href="{{url('public')}}/assets/css/bootstrap.css" rel="stylesheet" />
     <link href="{{url('public')}}/assets/css/admin.css" rel="stylesheet" />
