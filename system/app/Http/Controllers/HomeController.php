@@ -6,25 +6,20 @@ class HomeController extends Controller{
 
 
 	function showBeranda(){
-		return view('beranda')
+		return view('admin.beranda');
 	}
 
 	function showProduk(){
-		return view('produk-admin')
+		return view('admin.produk');
 	}
 
 	function showJual(){
-		return view('jual-produk')
+		return view('admin.jual-produk');
 	}
 
-	function showKategoriadmin(){
-		return view('kategori-admin')
+	function showKategori(){
+		return view('admin.kategori');
 	}
 
-	function showLogin(){
-		return view('login')
-	}
-	function showSignup(){
-		return view('signup')
-	}
+
 }

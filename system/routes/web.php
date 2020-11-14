@@ -2,66 +2,44 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProdukController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    return view('index');
-});
 
-Route::get('/login', function () {
-    return view('login');
-});
 
-Route::get('/signup', function () {
-    return view('signup');
-});
+// Auth
+Route::get('/login',[AuthController:: class, 'showLogin']);
+Route::get('/logout',[AuthController:: class, 'logout']);
+Route::get('/signup',[AuthController:: class, 'Registration']);
 
-Route::get('/index', function () {
-    return view('index');
-});
 
-Route::get('/detail', function () {
-    return view('detail');
-});
 
-Route::get('/category', function () {
-    return view('category');
-});
-
-Route::get('/base', function () {
-    return view('/base');
-});
-
-Route::get('/template', function () {
-    return view('template.base');
-});
+// User
+Route::get('/',[UserController:: class, 'showIndex']);
+Route::get('/index',[UserController:: class, 'showIndex']);
+Route::get('/detail',[UserController:: class, 'showDetail']);
 
 
 
 
 // admin
-Route::get('/beranda', function () {
-    return view('beranda');
-});
 
-Route::get('/produk-admin', function () {
-    return view('produk-admin');
-});
+Route::get('beranda', [HomeController:: class, 'showBeranda']);
+Route::get('jual-produk', [HomeController:: class, 'showJual']);
+Route::get('kategori', [HomeController:: class, 'showKategori']);
 
-Route::get('/jual-produk', function () {
-    return view('jual-produk');
-});
 
-Route::get('/kategori-admin', function () {
-    return view('kategori-admin');
-});
+
+// produk
+
+Route::get('produk',[ProdukController:: class, 'index']);
+Route::post('produk',[ProdukController:: class, 'store']);
+Route::get('create',[ProdukController:: class, 'create']);
+Route::get('produk/{produk}', [ProdukController:: class,'show']);
+Route::get('produk/{produk}/edit', [ProdukController:: class,'edit']);
+// edit data
+Route::put('produk/{produk}', [ProdukController:: class,'update']);
+Route::delete('produk/{produk}', [ProdukController:: class,'destroy']);
+
