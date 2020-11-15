@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProdukController;
-
+use App\Http\Controllers\KategoriController;
 
 
 
@@ -20,6 +20,9 @@ Route::get('/signup',[AuthController:: class, 'Registration']);
 Route::get('/',[UserController:: class, 'showIndex']);
 Route::get('/index',[UserController:: class, 'showIndex']);
 Route::get('/detail',[UserController:: class, 'showDetail']);
+Route::get('detail/{detail}',[UserController:: class, 'showDetail']);
+
+
 
 
 
@@ -29,6 +32,8 @@ Route::get('/detail',[UserController:: class, 'showDetail']);
 Route::get('beranda', [HomeController:: class, 'showBeranda']);
 Route::get('jual-produk', [HomeController:: class, 'showJual']);
 Route::get('kategori', [HomeController:: class, 'showKategori']);
+
+
 
 
 
@@ -43,3 +48,13 @@ Route::get('produk/{produk}/edit', [ProdukController:: class,'edit']);
 Route::put('produk/{produk}', [ProdukController:: class,'update']);
 Route::delete('produk/{produk}', [ProdukController:: class,'destroy']);
 
+
+// Kategori
+
+Route::get('kategori',[KategoriController:: class, 'index']);
+Route::post('kategori',[KategoriController:: class, 'insertKategori']);
+Route::get('kategori/create-kategori',[KategoriController:: class, 'createKategori']);
+Route::get('kategori/{kategori}',[KategoriController:: class,'showKategori']);
+Route::get('kategori/{kategori}/edit-kategori',[KategoriController:: class, 'editKategori']);
+Route::put('kategori/{kategori}',[KategoriController:: class,'updateKategori']);
+Route::delete('kategori/{kategori}',[KategoriController:: class,'destroyKategori']);

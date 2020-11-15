@@ -42,8 +42,11 @@
 
         <table class="table">
           <tr>
+            
             <td>Nama Produk</td>
-            <td>Pakaian Anak</td>
+       
+            <td>{{$detail->nama}}</td>
+        
           </tr>
           <tr>
             <td>Lokasi Produk</td>
@@ -66,8 +69,9 @@
             <td>Harga</td>
             <td style="color: red;font-weight: bold;">Rp. 90.000</td>
           </tr>
+    
           <tr>
-            <td><a href="" class="btn btn-danger shadow"><img src="icon/keranjang.png" width="20px"> Beli</a>
+            <td><a href="" class="btn btn-danger shadow"><img src="{{url('public')}}/assets/icon/keranjang.png" width="20px"> Beli</a>
             </td>
             <td></td>
           </tr>

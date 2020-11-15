@@ -32,7 +32,7 @@
 						</div>
 					</div>
 					<div class="signup-link"> Belum Punya Akun ? <a href="{{url('/signup')}}"> SignUp Now</a></div>
-				</form>
+				</form>	
 			</div>
 		</div>
 	</div>
