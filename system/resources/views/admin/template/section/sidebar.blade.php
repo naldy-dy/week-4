@@ -21,6 +21,9 @@
                     <li class="{{checkRouteActive('kategori')}}">
                         <a href="{{url('kategori')}}"><i class="fa fa-qrcode"></i> Kategori  </a>
                     </li>
+                    <li class="{{checkRouteActive('user')}}">
+                        <a href="{{url('user')}}"><i class="fa fa-qrcode"></i> User  </a>
+                    </li>
                     
                 </ul>
 

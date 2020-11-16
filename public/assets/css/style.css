@@ -7,6 +7,10 @@ a{
 a:hover{
 	color: #000;
 }
+.bg-saya{
+	background-color: #c70039;
+	color: #fff;
+}
 /*koleksi*/
 .bg-saya{
 	background-color: #c70039;
@@ -123,7 +127,7 @@ a:hover{
 .head-line{
 	background-color: #c70039;
 	color:#fff;
-	border-radius: 5px;
+	border-radius: 2px;
 	padding: 2px 0 0 1px;
 }
 .kategori{

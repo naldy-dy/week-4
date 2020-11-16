@@ -1,6 +1,8 @@
 <?php 
 
 namespace App\Http\Controllers;
+use Auth;
+use App\Models\User;
 
 class AuthController extends Controller{
 
@@ -9,7 +11,12 @@ class AuthController extends Controller{
 		return view('login');
 	}
 
-	function ProssesLogin(){
+	function prosesLogin(){
+		if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
+			return redirect('beranda')->with('success', 'Login Berhasil');
+		}else{                                      
+			return back()->with('warning', 'Gagal Masuk, Silahan Email dan Password anda');
+		}
 		
 	}
 	

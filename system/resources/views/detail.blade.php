@@ -17,17 +17,9 @@
     <!-- end header -->
 <!-- isi produk !-->
 <div class="container">
-  <div class="row">
-    <div class="col-md-12 my-3">
-      <div class="head-line">
-        <div class="ml-3 pt-2 pb-2">
-         <b>Sha-Sha Olshop</b>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
+
+  <div class="row my-5">
       <div class="col-md-6 pb-3">
         <div class="detail-box shadow">
           <img src="{{url('public')}}/assets/produk/1.jpg">
@@ -42,32 +34,27 @@
 
         <table class="table">
           <tr>
-            
+
             <td>Nama Produk</td>
-       
-            <td>{{$detail->nama}}</td>
-        
+            <td>{{ucwords($detail->nama)}}</td>
+
           </tr>
           <tr>
             <td>Lokasi Produk</td>
-            <td>Ketapang</td>
+            <td>{{ucwords($detail->lokasi)}}</td>
           </tr>
           <tr>
             <td>Jumlah Produk</td>
-            <td> 7 Unit</td>
-          </tr>
-          <tr>
-            <td>Ukuran Produk</td>
-            <td>S</td>
-          </tr>
-          <tr>
-            <td>Diskripsi</td>
-            <td>Pakaian Anak buat umur 8 tahun, barang bagus, bahan catton</td>
+            <td> {{$detail->stok}} Unit</td>
           </tr>
 
           <tr>
             <td>Harga</td>
-            <td style="color: red;font-weight: bold;">Rp. 90.000</td>
+            <td style="color: red;font-weight: bold;">Rp. {{number_format($detail->harga)}}</td>
+          </tr>
+          <tr>
+            <td>Jumlah Pesanan</td>
+            <td><input type="number" value="1" class="input-control" name="pesanan"></td>
           </tr>
     
           <tr>
@@ -76,6 +63,26 @@
             <td></td>
           </tr>
         </table>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-12 container my-3">
+      <div class="head-line shadow">
+        <div class="ml-3 pt-2 pb-2">
+         <b>Sha-Sha Olshop</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="col-md-12 my-5">
+        <div class="card shadow">
+        <div class="card-body">
+          <h1 class="my-3">Detail Produk</h1> <hr style="border: 2px solid #c70039;">
+          {!!nl2br($detail->diskripsi)!!}
+          </div>
+        </div>
       </div>
   </div>
 

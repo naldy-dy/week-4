@@ -81,7 +81,6 @@
   </div>
 </div>
 <!-- end banner -->
-
 <!--head kategori -->
 <div class="container-fluid">
   <div class="head-line my-2">
@@ -94,7 +93,6 @@
     </div>
   </div>
 </div>
-
 <!-- isi kategori -->
 <div class="container-fluid">
   <div class="row">
@@ -157,15 +155,8 @@
 </div>
 
 <!-- footer -->
-<div class="footer fixed">
-  <div class="container">
-        <div class="row">
-          <div class="col-md-12 my-5">
-          <p class="text-white text-center">&copy; Copyright 2020 | Built By Tim IT <b>Naldy</b>
-          </div>
-        </div>
-      </div>
-</div>
+
+@include('section.footer')
 
 
     <!-- Optional JavaScript -->
